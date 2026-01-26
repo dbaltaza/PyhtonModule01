@@ -1,0 +1,57 @@
+# Ignore Jupyter Notebook checkpoints and dataset/output directories typically used in data science projects
+
+# VS Code settings
+.vscode/
+.code-workspace
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Output and dataset directories
+output/
+outputs/
+data/
+dataset/
+datasets/
+results/
+*.csv
+*.tsv
+*.parquet
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.feather
+*.db
+*.sqlite
+*.pickle
+*.pkl
+*.joblib
+*.log
+
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.env
+
+# Mac/Windows OS files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.swp
+*.bak
+
+# Ignore any user-specified data science folders/files
+DS_FILES/
+DS_FILES/*
