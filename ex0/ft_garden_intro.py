@@ -1,18 +1,18 @@
 
-def ft_garden_intro() -> None:
-    """
-    Display basic information about a plant in the garden.
+class Plant:
+    def __init__(self, name: str, height: int, age: int) -> None:
+        self.name = name
+        self.height = height
+        self.age = age
 
-    Demonstrates fundamental Python concepts including variables,
-    print statements, and the main execution pattern.
-    """
-    name = "Rose"
-    height = "25cm"
-    age = 30
-    print("=== Welcome to My Garden ===")
-    print("Plant:", name)
-    print("Height:", height)
-    print("Age:", age, "days\n")
+
+def ft_garden_intro() -> None:
+    plant = Plant("Rose", 25, 30)
+
+    print("== Welcome to my Garden ==")
+    print("Name:", plant.name)
+    print("Height:", f"{plant.height}cm")
+    print("Age:", plant.age, "days")
     print("=== End of Program ===")
 
 
