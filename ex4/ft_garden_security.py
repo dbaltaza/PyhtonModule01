@@ -1,8 +1,8 @@
 
 class SecurePlant:
 
-    def __init__(self, n: str, h: int, a: int) -> None:
-        self._name = n
+    def __init__(self, name: str, h: int, a: int) -> None:
+        self._name = name
         print(f"Plant created: {n}")
         self.set_height(h)
         self.set_age(a)
