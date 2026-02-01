@@ -1,12 +1,28 @@
+"""
+Exercise 1: Garden Data
+Demonstrates working with collections of objects using tuples.
+"""
+
 
 class Plant:
-    def __init__(self, n: str, h: int, a: int) -> None:
-        self.name = n
-        self.height = h
-        self.age = a
+    """A simple Plant class representing a garden plant."""
+
+    def __init__(self, name: str, height: int, age: int) -> None:
+        """
+        Initialize a Plant instance.
+
+        Args:
+            name: The name of the plant.
+            height: The height of the plant in centimeters.
+            age: The age of the plant in days.
+        """
+        self.name = name
+        self.height = height
+        self.age = age
 
 
 def ft_garden_data() -> None:
+    """Display a registry of multiple plants stored in a tuple."""
     plants = (
         Plant("Rose", 25, 30),
         Plant("Sunflower", 80, 45),
