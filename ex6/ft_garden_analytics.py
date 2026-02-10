@@ -86,7 +86,6 @@ class Garden:
         print(f"\nPlants added: {self.added_count}, "
               f"Total growth: {self.total_growth}cm")
 
-        # Count different plant types
         regular_count = 0
         flowering_count = 0
         prize_count = 0
@@ -111,11 +110,9 @@ class Garden:
         """Calculate the total score for the garden."""
         score = 0
 
-        # Add height of each plant
         for plant in self.plants:
             score += plant.height
 
-        # Add prize points if plant has them
         for plant in self.plants:
             if hasattr(plant, 'prize_points'):
                 score += plant.prize_points
@@ -163,11 +160,11 @@ class GardenManager:
         self.gardens = []
 
     def add_garden(self, garden: Garden) -> None:
-        """Add a garden."""
+        """Add a garden to the manager."""
         self.gardens.append(garden)
 
     def create_garden_network(self, names: list) -> "GardenManager":
-        """Create gardens for a list of owner names."""
+        """Create multiple gardens from a list of owner names."""
         for name in names:
             self.add_garden(Garden(name))
         return self
@@ -178,7 +175,7 @@ class GardenManager:
         return "Water your plants in the morning for best results."
 
     def show_scores(self) -> None:
-        """Show scores for all gardens."""
+        """Display the score for each garden."""
         score_list = []
         for garden in self.gardens:
             score = garden.garden_score()
@@ -188,12 +185,12 @@ class GardenManager:
         print(f"Garden scores - {scores_text}")
 
     def show_total_gardens(self) -> None:
-        """Show how many gardens we manage."""
+        """Display the total number of managed gardens."""
         print(f"Total gardens managed: {len(self.gardens)}")
 
 
 def ft_garden_analytics() -> None:
-    """Demo the garden system."""
+    """Demonstrate the garden management system with examples."""
     print("=== Garden Management System Demo ===\n")
 
     manager = GardenManager()
@@ -201,7 +198,6 @@ def ft_garden_analytics() -> None:
     alice_garden = manager.gardens[0]
     bob_garden = manager.gardens[1]
 
-    # Alice's plants
     oak = Plant("Oak Tree", 100, 365)
     rose = FloweringPlant("Rose", 25, 30, "red")
     sunflower = PrizeFlower("Sunflower", 50, 60, "yellow", 10)
@@ -209,7 +205,6 @@ def ft_garden_analytics() -> None:
     alice_garden.add_plant(rose)
     alice_garden.add_plant(sunflower)
 
-    # Bob's plants (added silently for scoring)
     maple = Plant("Maple", 80, 200)
     tulip = FloweringPlant("Tulip", 12, 15, "purple")
     bob_garden.plants.append(maple)
