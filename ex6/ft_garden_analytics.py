@@ -83,7 +83,8 @@ class Garden:
         print("Plants in garden:")
         for plant in self.plants:
             print(f"- {plant}")
-        print(f"\nPlants added: {self.added_count} Total growth: {self.total_growth}cm")
+        print(f"\nPlants added: {self.added_count}, "
+              f"Total growth: {self.total_growth}cm")
 
         # Count different plant types
         regular_count = 0
