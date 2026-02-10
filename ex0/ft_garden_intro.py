@@ -6,7 +6,6 @@ Basic class and object creation.
 
 def ft_garden_intro() -> None:
     """Show basic plant info using simple variables."""
-    # Store plant information in simple variables
     name = "Rose"
     height = 25
     age = 30
